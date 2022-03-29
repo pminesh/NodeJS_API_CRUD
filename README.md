@@ -13,8 +13,6 @@ express-graphql
 
 1.express
 
-
-
 2.body-parser
 3.dotenv
 4.morgan
