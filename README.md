@@ -8,7 +8,7 @@
 
 -Get By Id
 
--Gel All Data
+-Get All Data
 
 -Multiple Image Upload
 
