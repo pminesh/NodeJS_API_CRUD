@@ -121,10 +121,6 @@ router.post('/api/employee',upload.array('img',12),addEmployee);//single image u
  *   responses:
  *    200:
  *     description: success
- *     content:
- *      application/json:
- *       schema:
- *        $ref: '#/definitions/Team'
  *    500:
  *     description: failure in update employee
  */
