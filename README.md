@@ -42,6 +42,10 @@
 
 12.swagger-ui-express
 
+**GRAPHQL**
+![image](https://user-images.githubusercontent.com/43671273/161377815-8959faa1-fd47-492d-a78b-f8e3b8a7d8a1.png)
 
-![image](https://user-images.githubusercontent.com/43671273/161377751-3ec7b5b6-02c9-4591-b64f-50a28a7cf241.png)
+**SWAGGER**
+![image](https://user-images.githubusercontent.com/43671273/161377839-4d931392-bb3b-4a37-a288-9099fea577f3.png)
+
 
