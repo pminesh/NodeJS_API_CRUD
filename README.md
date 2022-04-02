@@ -6,8 +6,6 @@
 
 -Delete
 
--Get By Id
-
 -Get All Data
 
 -Multiple Image Upload
@@ -15,6 +13,8 @@
 -Send Mail
 
 -Swagger
+
+-GraphQL
 
 **==Pacakges==**
 
