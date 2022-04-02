@@ -1,4 +1,5 @@
-import {Client} from '@elastic/elasticsearch';
+'use strict'
+import { Client } from '@elastic/elasticsearch';
 import { empDB } from '../model/employee_model.js';
 
 import nodemailer from "nodemailer";
@@ -73,10 +74,10 @@ export const addEmployee = (req, res) => {
         email: req.body.email,
         gender: req.body.gender,
         status: req.body.status,
-        image:req.files,//single file upload:  req.file.originalname
+        image: req.files,//single file upload:  req.file.originalname
     });
 
-    if(req.file){
+    if (req.file) {
         empDB.profile = req.file.path;
     }
     // save user in the database
@@ -100,11 +101,11 @@ export const updateEmployee = (req, res) => {
             .send({ message: "Data to update can not be empty" })
     }
     console.log(req.body)
-    const { name, email, gender,status } = req.body;
+    const { name, email, gender, status } = req.body;
     const image = req.files;
     const id = req.params.id;
 
-    empDB.findByIdAndUpdate(id,{ name, email, gender,status,image }, { useFindAndModify: false })
+    empDB.findByIdAndUpdate(id, { name, email, gender, status, image }, { useFindAndModify: false })
         .then(data => {
             if (!data) {
                 res.status(404).send({ message: `Cannot Update user with ${id}. Maybe user not found!` })
@@ -139,7 +140,7 @@ export const deleteEmployee = (req, res) => {
         });
 }
 
-// ===============================================================mail send
+// ===============================================================mail send--content-type:json
 // {
 //     "to":"minesh@broadviewinnovations.in",
 //     "subject":"Test Demo",
@@ -166,7 +167,7 @@ export const sendMail = async (req, res) => {
         },
     });
 
-    console.log(req.body.to,req.body.subject, req.body.text, req.body.html);
+    console.log(req.body.to, req.body.subject, req.body.text, req.body.html);
 
     // send mail with defined transport object
     let info = await transporter.sendMail({
@@ -178,11 +179,11 @@ export const sendMail = async (req, res) => {
     }).then(data => {
         res.status(200).send("Email sent successfuly.");
     })
-    .catch(err => {
-        res.status(500).send({
-            message: err.message || "Some error occurred while creating a create operation"
+        .catch(err => {
+            res.status(500).send({
+                message: err.message || "Some error occurred while creating a create operation"
+            });
         });
-    });
     // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
 
     // Preview only available when sending through an Ethereal account
