@@ -27,10 +27,13 @@ app.use(
 const swaggerOptions = {
   definition: {
     openapi: '3.0.2',
+    servers:[
+      {url: 'http://localhost:3000'}
+    ],
     info: {
-      title: 'Demo API',
+      title: 'Demo Swagger API',
       version: '1.0.0',
-      description: 'Demo crud Api',
+      description: 'Demo CRUD API',
       contact: {
         name: 'Demo Project'
       },
