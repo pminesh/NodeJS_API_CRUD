@@ -20,6 +20,7 @@ const upload = multer({ storage });
  *  get:
  *   summary: get all employees
  *   description: get all employees
+ *   tags: ["CRUD operations"]
  *   responses:
  *    200:
  *     description: success
@@ -81,6 +82,7 @@ router.get('/api/employee',getEmployee);
   *  post:
   *   summary: create employee
   *   description: create employee for the organisation
+  *   tags: ["CRUD operations"]
   *   requestBody:
   *    content:
   *     multipart/form-data:
@@ -101,6 +103,7 @@ router.post('/api/employee',upload.array('img',12),addEmployee);//single image u
  *  put:
  *   summary: update employee
  *   description: update employee
+ *   tags: ["CRUD operations"]
  *   consumes:
  *    - application/json
  *   produces:
@@ -121,10 +124,6 @@ router.post('/api/employee',upload.array('img',12),addEmployee);//single image u
  *   responses:
  *    200:
  *     description: success
- *     content:
- *      application/json:
- *       schema:
- *        $ref: '#/definitions/Team'
  *    500:
  *     description: failure in update employee
  */
@@ -137,6 +136,7 @@ router.put('/api/employee/:id', upload.array('img',12),updateEmployee);
  *  delete:
  *   summary: delete employee
  *   description: delete employee
+ *   tags: ["CRUD operations"]
  *   parameters:
  *    - in: path
  *      name: employee_id
