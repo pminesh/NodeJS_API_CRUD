@@ -50,7 +50,7 @@
 
 **==SWAGGER==**
 
-![image](https://user-images.githubusercontent.com/43671273/161378948-0c0cacb5-f737-4c71-8587-3557acf9ae52.png)
+![image](https://user-images.githubusercontent.com/43671273/161379946-9b78c171-c41a-4528-adc4-9c0b8e46b25c.png)
 
 **==MONGODB==**
 
