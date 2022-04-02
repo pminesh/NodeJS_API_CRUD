@@ -14,6 +14,8 @@
 
 -Send Mail
 
+-Swagger
+
 **Pacakges**
 
 1.express
@@ -35,3 +37,7 @@
 9.nodemon
 
 10.nodemailer
+
+11.swagger-jsdoc
+
+12.swagger-ui-express
